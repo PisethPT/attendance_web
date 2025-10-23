@@ -1,0 +1,22 @@
+POST http://localhost:8080/api/users/addNewUser HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "newuser",
+  "password": "password123",
+  "email": "newuser@example.com"
+}
+
+###
+POST http://localhost:8080/api/users/generateToken HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "newuser@example.com",
+  "password": "password123"
+}
+
+###
+GET http://localhost:8080/api/users/1 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZXd1c2VyQGV4YW1wbGUuY29tIiwiaWF0IjoxNzU1MzIwNTE3LCJleHAiOjE3NTUzMjQxMTd9.0o7ES4kAr8IPo70Dt9Ze38Mz2sJHoZdn4BvShFk7bos
